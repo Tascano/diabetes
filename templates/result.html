@@ -163,18 +163,18 @@ font-size: 20px;
 		<div class="container"  style="background-color: rgba(255,255,255,0.4)">
             <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
             <div class='description'>
-    			<p>A Random Forest Based approach for a quick prediction of Diabetes</p>
+    			
     		</div>
     	</div>
 
 		<!-- Result -->
 		<div class="results"  style="background-color: rgba(0,0,0,0.2)">
 			{% if prediction==1 %}
-				<h1 style="color:#af832c;background-color:black;">Prediction: <span class='danger'>Oops! You have DIABETES.</span></h1>
+				<h1 style="color:#af832c;background-color:black;">Prediction: <span class='danger'>You are at a higher risk of having Diabetes.</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='positive.jpg') }}" alt="Diabetes Image">
 				 <h1 style="color:#af832c;background-color:black;"> Accuracy of prediction is {{ accuracy }}</h1>
 			{% elif prediction==0 %}
-				<h1 style="color:#af832c;background-color:black;">Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
+				<h1 style="color:#af832c;background-color:black;">Prediction: <span class='safe'>Great! You are at a lower risk of having Diabetes.</span></h1>
 				<img class="gif1" src="{{ url_for('static', filename='Firstpage.gif') }}" alt="Not Diabetes Image">
 				 <h1 style="color:#af832c;background-color:black;"> Accuracy of prediction is {{ accuracy }}</h1>
 			{% endif %}
